@@ -33,13 +33,13 @@ REST API de autenticación de usuarios construida con Java y Spring Boot, que im
 ## 📸 Demostración
 
 ### Registro de usuario
-![Register](docs.images/register.png)
+![Register](images/register.png)
 
 ### Login
-![Login](docs.images/login.png)
+![Login](images/login.png)
 
 ### Ruta protegida con JWT
-![Profile](docs.images/profile.png)
+![Profile](images/profile.png)
 
 ## ⚙️ Cómo correr el proyecto localmente
 
