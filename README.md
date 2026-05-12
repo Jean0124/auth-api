@@ -41,6 +41,17 @@ REST API de autenticación de usuarios construida con Java y Spring Boot, que im
 ### Ruta protegida con JWT
 ![Profile](images/profile.png)
 
+Antes de correr el proyecto configura estas variables de entorno:
+
+## ⚙️ Configuración
+| Variable | Descripción | Ejemplo |
+|---|---|---|
+| `DB_URL` | URL de PostgreSQL | `jdbc:postgresql://localhost:5432/auth_db` |
+| `DB_USER` | Usuario de PostgreSQL | `postgres` |
+| `DB_PASSWORD` | Contraseña de PostgreSQL | `tu_password` |
+| `JWT_SECRET` | Clave secreta JWT (mín. 32 caracteres) | `mi_clave_super_secreta_32chars` |
+
+
 ## ⚙️ Cómo correr el proyecto localmente
 
 ### Requisitos
@@ -50,45 +61,45 @@ REST API de autenticación de usuarios construida con Java y Spring Boot, que im
 
 ### Pasos
 
-1. Clona el repositorio
-   \```bash
+1. Clona el repositorio en un git bash:
+
+```bash
    git clone https://github.com/Jean0124/auth-api.git
-   cd auth-api
-   \```
+```
 
-2. Crea la base de datos
-   \```sql
-   CREATE DATABASE auth_db;
-   \```
+2. Crea la base de datos en postgreSQL:
 
-3. Configura las variables de entorno — copia el archivo de ejemplo
-   \```bash
-   cp src/main/resources/application-example.properties src/main/resources/application.properties
-   \```
+```sql
+CREATE DATABASE auth_db;
+```
 
-4. Edita `application.properties` con tus credenciales locales
 
-5. Corre el proyecto
-   \```bash
-   ./mvnw spring-boot:run
-   \```
+3. Configura tus credenciales en `src/main/resources/application.properties`
 
-6. La API estará disponible en `http://localhost:8080`
+
+4. Corre el proyecto en la consola o en un IDE:
+
+```bash
+./mvnw spring-boot:run
+```
+
+5. La API estará disponible en `http://localhost:8080`
 
 ## 🧪 Correr pruebas unitarias
 
-\```bash
+usar el comando : 
+```bash
 ./mvnw test
-\```
+```
 
 Resultado esperado:
-\```
+
 Tests run: 9, Failures: 0, Errors: 0
-\```
+
 
 ## 📁 Estructura del proyecto
 
-\```
+```
 src/
 ├── main/java/com/api/autentificacion/auth_api/
 │   ├── config/
@@ -116,7 +127,7 @@ src/
 └── service/
 ├── AuthServiceTest.java
 └── JwtServiceTest.java
-\```
+```
 
 ## 🧠 Conceptos aplicados
 
